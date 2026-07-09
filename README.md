@@ -12,6 +12,7 @@ https://mundos-perdidos.museoscasso.com.ar/
 - `style.css`: diseño visual responsive.
 - `app.js`: menú móvil y animaciones suaves.
 - `CNAME`: dominio personalizado para GitHub Pages.
+- `.cpanel.yml`: despliegue automático a `$HOME/public_html/mundos-perdidos/` desde cPanel Git Version Control.
 
 ## Cómo publicarlo
 
@@ -28,11 +29,11 @@ https://mundos-perdidos.museoscasso.com.ar/
 
 ### Opción B: cPanel Git Version Control
 
-1. En cPanel, crear el subdominio `mundos-perdidos.museoscasso.com.ar`.
+1. En cPanel, crear el subdominio `mundos-perdidos.museoscasso.com.ar` con carpeta `public_html/mundos-perdidos`.
 2. En **Git Version Control**, clonar este repositorio:
    `https://github.com/damian295/paleobar-mundos-perdidos.git`
-3. Definir como ruta pública del subdominio la carpeta donde quedan `index.html`, `style.css` y `app.js`.
-4. Cada actualización se publica haciendo **Pull or Deploy** desde cPanel.
+3. En el repositorio dentro de cPanel, usar **Pull or Deploy**.
+4. El archivo `.cpanel.yml` copia automáticamente `index.html`, `style.css`, `app.js` y `CNAME` a `public_html/mundos-perdidos`.
 
 ## Nota editorial
 
